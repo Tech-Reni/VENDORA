@@ -427,6 +427,56 @@
             &copy; 2025 Vendora. All Rights Reserved.
         </div>
     </footer>
+
+    <script>
+        // Prices in Naira
+        const plans = [
+            { title: "Startup Plan", price: 5000 },
+            { title: "SME Growth Plan", price: 15000 },
+            { title: "Sales Booster Plan", price: 30000 },
+            { title: "Vendor Pro Plan", price: 50000 },
+            { title: "Brand Domination", price: 80000 },
+            { title: "Corporate Excellence", price: 120000 }
+        ];
+        
+        // Currency symbols
+        const currencySymbols = {
+            USD: "$",
+            EUR: "€",
+            GBP: "£",
+            NGN: "₦",
+            INR: "₹",
+            CAD: "C$"
+        };
+        
+        async function showConvertedPrices() {
+            try {
+                const geo = await fetch("https://ipapi.co/json/").then(res => res.json());
+                const userCurrency = geo.currency || "NGN";
+        
+                const exchangeData = await fetch(`https://api.exchangerate-api.com/v4/latest/NGN`).then(res => res.json());
+                const rate = exchangeData.rates[userCurrency] || 1;
+        
+                const symbol = currencySymbols[userCurrency] || `${userCurrency} `;
+        
+                const priceEls = document.querySelectorAll(".plan-price");
+        
+                priceEls.forEach((el, index) => {
+                    if (index >= plans.length) return; // Skip Custom Package
+        
+                    const naira = plans[index].price;
+                    const converted = (naira * rate).toFixed(2);
+        
+                    el.textContent = `₦${naira.toLocaleString()} (≈ ${symbol}${parseFloat(converted).toLocaleString()})`;
+                });
+        
+            } catch (err) {
+                console.warn("Could not convert currency:", err);
+            }
+        }
+        
+        showConvertedPrices();
+        </script>
     
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
