@@ -3,7 +3,7 @@
 
 <head>
 
-    <!-- Google tag (gtag.js) -->
+       <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZCY49PCVY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,476 +17,1121 @@
     <meta name="description"
         content="VENDORA is the all-in-one solution for vendors, offering professional branding, marketing, e-commerce, and business growth services. From stunning promotional designs to social media management and ad campaigns, we help vendors scale effortlessly. Subscribe today and take your business to the next level!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/mobile.css">
-
-    <!-- 
+      <!-- 
     - favicon
   -->
     <link rel="shortcut icon" href="img/Vendora_logo.png" type="image/png">
     <!-- 
     - preload images
   -->
-    <link rel="preload" as="image" href="img/Vendora_logo.png">
+    <link rel="preload" as="image" href="logo.png">
 
-    <title>VENDORA</title>
-</head>
+    <title>VENDORA Digital | Refining Tech in Businesses</title>
 
+    <!-- Fonts: Inter (UI) & JetBrains Mono (Code/Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 
-<body>
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- DESKTOP NAVIGATION BAR -->
-    <div class="desktop-navbar">
-        <div class="desk-nav-item">
-            <a href="#">Home</a>
-        </div>
-        <div class="desk-nav-item">
-            <a href="#about">About</a>
-        </div>
-        <div class="desk-nav-item-img">
-            <img src="img/Vendora_logo.png" alt="logo">
-        </div>
-        <div class="desk-nav-item">
-            <a href="#review">Reviews</a>
-        </div>
-        <div class="desk-nav-item">
-            <a href="#pricing">Pricing</a>
-        </div>
-        <div class="desk-nav-item" id="menu-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" fill="currentColor">
-                <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
-            </svg>
-        </div>
-    </div>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
+    <style>
+        /* =========================================
+           1. CONFIG & VARIABLES (THEME ENGINE)
+           ========================================= */
+        :root {
+            /* GitHub/Modern Dark Theme Palette */
+            --bg-body: #0d1117;
+            /* GitHub Dark Dimmed Background */
+            --bg-card: #161b22;
+            /* Slightly lighter card bg */
+            --bg-glass: rgba(22, 27, 34, 0.7);
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h2>VENDORA</h2>
-            <button class="close-btn" id="close-btn">
-                <i class="ri-close-line"></i>
-            </button>
-        </div>
-        <ul class="sidebar-menu">
-            <li><a href="#"><i class="ri-home-4-line"></i> Home</a></li>
-            <li><a href="#about"><i class="ri-user-star-line"></i> About</a></li>
-            <li><a href="#review"><i class="ri-customer-service-2-line"></i> Reviews</a></li>
-            <li><a href="#pricing"><i class="ri-secure-payment-line"></i> Pricing</a></li>
-        </ul>
-    </div>
+            --border-subtle: #30363d;
+            /* Subtle border */
+            --border-glow: #8b5cf6;
+            /* Purple border hover */
 
+            --primary-purple: #7c3aed;
+            --primary-glow: #581c87;
+            --accent-cyan: #22d3ee;
+            --accent-pink: #f472b6;
 
-    <!-- FIRST SECTION -->
-    <section class="first-sect">
-        <div class="article">
-            <p>The Goal is to get more Customers and Sales for YOU!</p>
-            <a href="#pricing">
-                <button class="contact-btn">
-                    <i class="ri-shake-hands-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-    </section>
+            --text-main: #ffffff;
+            --text-muted: #8b949e;
 
-    <br><br>
+            --font-ui: 'Inter', sans-serif;
+            --font-code: 'JetBrains Mono', monospace;
 
-    <!-- SERVICE SECTION -->
-    <h2 class="section-heading-title">Our Services</h2>
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --radius-full: 999px;
 
-    <section class="service-section" id="services">
-        <div class="service-cards">
+            --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
 
-            <div class="card">
-                <img src="./img/web-design.png" loading="lazy" alt=""> <code> Custom Branding & Design </code>
-                <p>
-                    Your brand’s identity is everything. We help you create a lasting impression with high-quality.
-                    From professional logos and business cards to flyers, letterheads, and digital banners, we ensure
-                    your brand stands out.
-                </p>
-            </div>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
 
-            <div class="card">
-                <img src="./img/social-media.png" loading="lazy" alt=""> <code> Social Media Growth </code>
-                <p>Your social media presence can make or break your brand. We help optimize, grow, and engage your
-                    audience on platforms like Instagram, Facebook, Twitter, and TikTok.</p>
-            </div>
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: var(--font-ui);
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(34, 211, 238, 0.08), transparent 25%);
+        }
 
-            <div class="card">
-                <img src="./img/online-store.png" loading="lazy" alt=""> <code>  E-commerce Development </code>
-                <p>Want to sell online? We create stunning, responsive, and conversion-focused e-commerce websites
-                    tailored
-                    to your business needs.</p>
-            </div>
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
 
-            <div class="card">
-                <img src="./img/video-editing.png" loading="lazy" alt=""> <code> Video Promotions </code>
-                <p>Video content is king! Our team crafts high-quality, engaging, and professionally edited videos to
-                    help market your brand, product, or service.</p>
-            </div>
+        ::-webkit-scrollbar-track {
+            background: var(--bg-body);
+        }
 
-            <div class="card">
-                <img src="./img/clarification.png" loading="lazy" alt=""> <code> Expert Consultation </code>
-                <p>Not sure what’s holding your business back? Our expert consultation services give you deep insights
-                    into your business performance.</p>
-            </div>
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-subtle);
+            border-radius: 4px;
+        }
 
-            <div class="card">
-                <img src="./img/design.png" loading="lazy" alt="">
-                <code> Custom Package (Tailored Business Solutions) </code>
-                <p>Every business is unique, and sometimes, the traditional packages don’t fit your exact needs. That’s
-                    why we offer a Custom Package, where you tell us your business challenges. </p>
-            </div>
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-purple);
+        }
 
+        /* =========================================
+           2. UTILITY COMPONENTS
+           ========================================= */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-        </div>
-    </section>
-    <br><br>
+        .section-py {
+            padding: 120px 0;
+        }
 
-    <!-- THE ABOUT ME SECTION  -->
-    <p class="meet-the-ceo" id="about">About VENDORA</p>
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-img"></div>
-            <div class="right">
-                <div class="content">
-                    <h1>We are VENDORA</h1>
-                    <p>
-                        At VENDORA, we believe every vendor deserves the right tools to succeed. We are an all-in-one
-                        business solution designed to help vendors grow, scale, and thrive in today’s competitive
-                        market. Whether you're a small business owner, an established vendor, or just starting, VENDORA
-                        provides the branding, marketing, and digital solutions you need to take your business to the
-                        next level.
-                    </p>
-                    <a href="https://wa.me/+2348133033736/?text=Hello%20VENDORA" class="btn">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        .text-purple {
+            color: #a78bfa;
+        }
 
-    <!-- REVIEW SECTION -->
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: var(--radius-full);
+            color: #d8b4fe;
+            font-family: var(--font-code);
+            font-size: 0.8rem;
+            margin-bottom: 24px;
+        }
 
-    <h2 class="section-heading-title" id="review">Our Reviews</h2>
-    <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-        slides-per-view="auto" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-        coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false">
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./img/review.png" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">VENDORA transformed my business overnight! I used to struggle with social media
-                        engagement and ad conversions, but their team handled everything flawlessly. Now, my sales have
-                        tripled, and I get daily inquiries. Worth every penny!
-                    </p><br><br>
-                    <p>— Sophia M. | Fashion Brand Owner</p>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./img/review.png" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">Running ads used to be a nightmare until I found VENDORA. They handle
-                        everything—from targeting the right audience to optimizing content. The ROI has been incredible.
-                        If you're a vendor, stop struggling and join VENDORA now!
-                    </p><br>
-                    <p>— Chinedu E. | Electronics Dealer</p>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./img/review.png" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">As a vendor, I needed more than just ads—I needed strategy! VENDORA not only
-                        created stunning flyers and promo videos but also managed my e-commerce site seamlessly. I’ve
-                        never had this much traffic before. Highly recommended!</p><br>
-                    <p>— David K. | Tech Gadget Seller</p>
-                </div>
-            </div>
-        </swiper-slide>
-        <swiper-slide>
-            <div class="slide">
-                <br>
-                <img class="review-img" src="./img/review.png" loading="lazy" alt="Logo 1">
-                <div class="testimonial">
-                    <p class="review">I was skeptical at first, but after using VENDORA’s consultation service, I
-                        finally understood where I was going wrong. Their AI-powered insights, combined with human
-                        expertise, helped me restructure my business model. Now, my brand is booming!
-                    </p><br>
-                    <p>— Aisha O. | Organic Skincare Entrepreneur</p>
-                </div>
-            </div>
-        </swiper-slide>
+        .badge span {
+            margin-right: 8px;
+            position: relative;
+            top: 1px;
+        }
 
-    </swiper-container>
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #a855f7;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 0 0 10px #a855f7;
+        }
 
-    <br><br>
+        /* Buttons */
+        .btn {
+            padding: 14px 28px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;
+        }
 
-    <div class="matters-article">
-        <p>We care about your business as much as you do. Our team is dedicated to providing you with the best solutions
-            tailored to your needs. We are not just a service provider; we are your partners in growth.</p>
-    </div>
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-purple), #4c1d95);
+            color: white;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+        }
 
-    <!-- PRICING SECTION -->
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.6);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
 
-    <div class="pricing-container" id="pricing">
-        <div class="pricing-plan">
-            <div class="plan-title">Startup Plan</div>
-            <div class="plan-price">₦5,000</div>
-            <ul class="plan-features">
-                <li>- Business Card Design</li>
-                <li>- 2 Flyer Design</li>
-                <li>- Weekly Business Tips</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20subscribe%20to%20the%20Startup%20Plan">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-title">SME Growth Plan</div>
-            <div class="plan-price">₦15,000</div>
-            <ul class="plan-features">
-                <li>- Social Media Setup & Management</li>
-                <li>- Custom QR Code</li>
-                <li>- Business Card Design</li>
-                <li>- 1 promo video</li>
-                <li>- 3 Flyers Design per month</li>
-                <li>- Weekly Business Tips</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20subscribe%20to%20the%20SME%20Growth%20Plan">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-title">Sales Booster Plan</div>
-            <div class="plan-price">₦30,000</div>
-            <ul class="plan-features">
-                <li>- Social Media Setup & Management</li>
-                <li>- Custom QR Code</li>
-                <li>- Business Card Design</li>
-                <li>- 4 Flyers Design per month</li>
-                <li>- E-commerce website</li>
-                <li>- 1 promo video </li>
-                <li>- Weekly Business Tips</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20subscribe%20to%20the%20Sales%20Booster%20Plan">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-title">Vendor Pro Plan</div>
-            <div class="plan-price">₦50,000</div>
-            <ul class="plan-features">
-                <li>- Google Verification (Appear as search results)</li>
-                <li>- Social Media Setup & Management</li>
-                <li>- Custom QR Code</li>
-                <li>- Business Card Design</li>
-                <li>- 6 Flyers Design per month</li>
-                <li>- Standard E-commerce website</li>
-                <li>- 2 promo video content</li>
-                <li>- Weekly Business Tips</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20subscribe%20to%20the%20Vendor%20Pro%20Plan">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-title">Brand Domination</div>
-            <div class="plan-price">₦80,000</div>
-            <ul class="plan-features">
-                <li>- Google Verification (Appear as search results)</li>
-                <li>- AI-powered Analysis for Monthly Reports</li>
-                <li>- Social Media Setup & Management</li>
-                <li>- Custom QR Code</li>
-                <li>- Business Card Design</li>
-                <li>- 10 Flyers Design per month</li>
-                <li>- Standard E-commerce website</li>
-                <li>- 3 promo video content</li>
-                <li>- Weekly Business Tips</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20subscribe%20to%20the%20Brand%20Domination">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-title">Corporate Excellence</div>
-            <div class="plan-price">₦120,000</div>
-            <ul class="plan-features">
-                <li>- Google Verification (Appear as search results)</li>
-                <li>- AI-powered Analysis for Monthly Reports</li>
-                <li>- Custom QR Code</li>
-                <li>- Brand Influencing Assistance</li>
-                <li>- Social Media Setup & Management</li>
-                <li>- Business Card Design</li>
-                <li>- 12 Flyers Design per month</li>
-                <li>- Standard E-commerce website</li>
-                <li>- 5 promo video content</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20subscribe%20to%20the%20Corporate%20Excellence">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-        <div class="pricing-plan">
-            <div class="plan-title">The Custom Package</div>
-            <div class="plan-price">Negotiable</div>
-            <ul class="plan-features">
-                <li>Tell us what your business needs or struggles with.</li>
-                <li>We know it's majorly customers.</li>
-                <li>Let's discuss and see how VENDORA can build a solution specifically for your brand.</li>
-                <li>Negotiate a fair price.</li>
-            </ul>
-            <a
-                href="https://wa.me/+2348133033736/?text=Hello%20VENDORA%20I%20will%20like%20to%20discuss%20the%20Custom%20Package">
-                <button class="contact-btn">
-                    <i class="ri-whatsapp-line"></i>
-                    <code>Get Started</code>
-                </button>
-            </a>
-        </div>
-    </div>
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+        }
 
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-main);
+        }
 
-    <!-- FOOTER -->
+        /* =========================================
+           3. NAVBAR (FLOATING GLASS)
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+            z-index: 1000;
+            padding: 12px 24px;
+            background: rgba(13, 17, 23, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-full);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
 
-    <footer>
-        <div class="footer-container">
-            <!-- Brand & About -->
-            <div class="footer-column">
-                <img src="./img/Vendora_logo.png" alt="">
-            </div>
+        .navbar:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
 
-            <!-- Quick Links -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="https://wa.me/+2348133033736/?text=Hello%20VENDORA">Contact</a></li>
-                </ul>
-            </div>
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-            <!-- Services -->
-            <div class="footer-column">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="#pricing">Social Media Management</a></li>
-                    <li><a href="#pricing">Promotional Videos</a></li>
-                    <li><a href="#pricing">Website Development</a></li>
-                    <li><a href="#pricing">Graphic Designs</a></li>
-                    <li><a href="#pricing">Business Consulting</a></li>
-                </ul>
-            </div>
+        .logo-img {
+            height: 35px;
+            border-radius: 8px;
+        }
 
-            <!-- Contact & Socials -->
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p>Email : official.vendora.ng@gmail.com</p>
-                <p>Phone : +234 8133 033 736</p>
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+        }
 
-                <!-- Social Icons -->
-                <!-- <div class="social-icons">
-                    <a href="#"><i class="ri-facebook-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                    <a href="#"><i class="ri-whatsapp-fill"></i></a>
-                </div> -->
-            </div>
-        </div>
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
-        <div class="footer-bottom">
-            &copy; 2025 Vendora. All Rights Reserved.
-        </div>
-    </footer>
+        .nav-link {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
 
-    <script>
-        // Prices in Naira
-        const plans = [
-            { title: "Startup Plan", price: 5000 },
-            { title: "SME Growth Plan", price: 15000 },
-            { title: "Sales Booster Plan", price: 30000 },
-            { title: "Vendor Pro Plan", price: 50000 },
-            { title: "Brand Domination", price: 80000 },
-            { title: "Corporate Excellence", price: 120000 }
-        ];
+        .nav-link:hover {
+            color: var(--text-main);
+        }
 
-        // Currency symbols
-        const currencySymbols = {
-            USD: "$",
-            EUR: "€",
-            GBP: "£",
-            NGN: "₦",
-            INR: "₹",
-            CAD: "C$"
-        };
+        .hamburger {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
-        async function showConvertedPrices() {
-            try {
-                const geo = await fetch("https://ipapi.co/json/").then(res => res.json());
-                const userCurrency = geo.currency || "NGN";
+        /* =========================================
+           4. HERO SECTION (HEAVY VISUALS)
+           ========================================= */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
 
-                const exchangeData = await fetch(`https://api.exchangerate-api.com/v4/latest/NGN`).then(res => res.json());
-                const rate = exchangeData.rates[userCurrency] || 1;
+        /* Massive Ambient Glow Background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent 70%);
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            filter: blur(60px);
+        }
 
-                const symbol = currencySymbols[userCurrency] || `${userCurrency} `;
+        .hero h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
 
-                const priceEls = document.querySelectorAll(".plan-price");
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
 
-                priceEls.forEach((el, index) => {
-                    if (index >= plans.length) return; // Skip Custom Package
+        .hero-visual {
+            margin-top: 60px;
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-card);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(2deg);
+            transition: transform 0.5s ease;
+        }
 
-                    const naira = plans[index].price;
-                    const converted = Math.ceil(naira * rate); // Round up to whole number
+        .hero-visual:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.02);
+            border-color: var(--primary-purple);
+        }
 
-                    el.textContent = `${symbol}${converted.toLocaleString()}`;
-                });
+        .hero-visual img {
+            width: 100%;
+            display: block;
+            opacity: 0.8;
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        }
 
-            } catch (err) {
-                console.warn("Could not convert currency:", err);
+        /* =========================================
+           5. INFINITE LOGO MARQUEE
+           ========================================= */
+        .marquee-section {
+            padding: 40px 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            background: rgba(13, 17, 23, 0.5);
+            overflow: hidden;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 60px;
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-item {
+            font-family: var(--font-code);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #4b5563;
+            /* Disabled look */
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .marquee-item i {
+            font-size: 1.8rem;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
             }
         }
 
-        showConvertedPrices();
+        /* =========================================
+           6. SERVICES (BENTO GRID UI)
+           ========================================= */
+        .section-header {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, minmax(250px, auto));
+            gap: 24px;
+        }
+
+        /* Glass Cards */
+        .card {
+            background: linear-gradient(180deg, rgba(22, 27, 34, 0.6) 0%, rgba(22, 27, 34, 0.9) 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: all 0.4s var(--ease-elastic);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(124, 58, 237, 0.5);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.15);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border: 1px solid rgba(34, 211, 238, 0.2);
+        }
+
+        /* Purple Accent for specific icons */
+        .icon-purple {
+            color: var(--primary-purple);
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Bento Spans */
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        .span-row-2 {
+            grid-row: span 2;
+        }
+
+        /* =========================================
+           7. PROJECTS (HIGH FIDELITY)
+           ========================================= */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .project-card {
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-card);
+            overflow: hidden;
+            group: 1;
+        }
+
+        .project-thumb {
+            height: 300px;
+            background: #111;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            opacity: 0.8;
+        }
+
+        .project-card:hover .project-thumb img {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 30px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tag {
+            font-family: var(--font-code);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        /* =========================================
+           8. CODE / TERMINAL AESTHETIC SECTION
+           ========================================= */
+        .terminal-section {
+            background: linear-gradient(to right, #0d1117 50%, rgba(13, 17, 23, 0.5)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .code-window {
+            background: rgba(22, 27, 34, 0.95);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+        }
+
+        .code-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .red {
+            background: #ef4444;
+        }
+
+        .yellow {
+            background: #f59e0b;
+        }
+
+        .green {
+            background: #22c55e;
+        }
+
+        .line {
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .keyword {
+            color: #f472b6;
+        }
+
+        /* Pink */
+        .func {
+            color: #60a5fa;
+        }
+
+        /* Blue */
+        .string {
+            color: #a3e635;
+        }
+
+        /* Lime */
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: var(--accent-cyan);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* =========================================
+           9. CONTACT & FOOTER
+           ========================================= */
+        .contact-box {
+            background: radial-gradient(circle at center, #1e1b4b 0%, #0d1117 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 80px;
+            text-align: center;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 40px 0;
+            background: #090c10;
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .socials a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: var(--text-main);
+        }
+
+        /* =========================================
+           RESPONSIVE
+           ========================================= */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .span-2 {
+                grid-column: auto;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            /* Hidden by default */
+            width: 85%;
+            height: 100vh;
+            background: rgba(13, 17, 23, 0.95);
+            /* Dark Github Theme */
+            backdrop-filter: blur(20px);
+            border-left: 1px solid var(--border-subtle);
+            z-index: 2000;
+            padding: 30px;
+            transition: right 0.4s var(--ease-elastic);
+            display: flex;
+            flex-direction: column;
+            box-shadow: -20px 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+            /* Slide in */
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .mobile-nav-links a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            display: block;
+        }
+
+        .close-btn {
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        /* =========================================
+   UPDATED RESPONSIVE SECTION
+   ========================================= */
+        @media (max-width: 768px) {
+
+            /* 1. Navbar Fixed to TOP */
+            .navbar {
+                width: 85%;
+                top: 20px;
+                bottom: auto;
+                padding: 12px 20px;
+                left: calc(50% - 2.5%);
+                transform: translateX(-50%);
+            }
+
+            .nav-links,
+            .btn-primary.desktop-only {
+                display: none;
+                /* Hide desktop links */
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            /* 2. Hero Buttons Spacing Fix */
+            .hero-btns {
+                display: flex;
+                flex-direction: column;
+                /* Stack them vertically */
+                gap: 15px;
+                /* Space between buttons */
+                width: 100%;
+                padding: 0 20px;
+                /* Prevent touching edges */
+            }
+
+            .hero-btns .btn {
+                width: 100%;
+                /* Full width for easier tapping */
+                justify-content: center;
+            }
+
+            /* Adjust font sizes */
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-box {
+                padding: 40px 20px;
+            }
+
+            .footer-flex {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+      HERO SECTION: High impact, massive gradient 
+    -->
+    <section class="hero">
+        <div class="container" style="margin-top: 30px;">
+            <div class="badge reveal-down">
+                <span class="badge-dot"></span>
+                <span>v2.0 Custom Dashboard Available</span>
+            </div>
+
+            <h1 class="reveal-up">
+                Engineering the <br>
+                <span class="text-gradient">Digital Standard.</span>
+            </h1>
+
+            <p class="reveal-up delay-100">
+                VENDORA builds high-scale ledger systems, e-commerce engines, and corporate software. No templates. Pure
+                engineering.
+            </p>
+
+            <div class="hero-btns reveal-up delay-200" style="margin-bottom: 40px;">
+                <a href="#contact" class="btn btn-primary">
+                    Initiate Build <i class="ri-arrow-right-line"></i>
+                </a>
+                <a href="#work" class="btn btn-glass">
+                    <i class="ri-github-fill"></i> View Code
+                </a>
+            </div>
+
+            <!-- 3D Tilt Visual -->
+            <div class="hero-visual reveal-up delay-300">
+                <!-- High Tech Dashboard Image Placeholder -->
+                <img src="dashboard.png"
+                    alt="Dashboard Interface">
+            </div>
+            <br><br><br>
+        </div>
+    </section>
+
+    <!-- 
+      MARQUEE: Client Wall
+    -->
+    <section class="marquee-section">
+        <div class="marquee-track">
+            <!-- Repeated logos for infinite effect -->
+            <div class="marquee-item"><i class="ri-shield-flash-line"></i> THE CARE BAR</div>
+            <div class="marquee-item"><i class="ri-instance-line"></i> RHIAS HAIRLINE</div>
+            <div class="marquee-item"><i class="ri-building-2-line"></i> ELIORA</div>
+            <div class="marquee-item"><i class="ri-community-line"></i> H3 APARTMENTS</div>
+            <div class="marquee-item"><i class="ri-stack-line"></i> LEDGER SYS</div>
+            <div class="marquee-item"><i class="ri-server-line"></i> CORE DATA</div>
+            <!-- Duplicate for loop -->
+            <div class="marquee-item"><i class="ri-shield-flash-line"></i> THE CARE BAR</div>
+            <div class="marquee-item"><i class="ri-instance-line"></i> RHIAS HAIRLINE</div>
+            <div class="marquee-item"><i class="ri-building-2-line"></i> ELIORA</div>
+            <div class="marquee-item"><i class="ri-community-line"></i> H3 APARTMENTS</div>
+        </div>
+    </section>
+
+    <!-- 
+      SERVICES: Bento Grid Layout
+    -->
+    <section id="expertise" class="section-py">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Capabilities</h2>
+                <p style="color: var(--text-muted)">Architecting solutions for the $5M+ revenue class.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Large Card -->
+                <div class="card span-2 reveal-up">
+                    <div class="card-icon icon-purple"><i class="ri-database-2-line"></i></div>
+                    <h3>Custom Ledger Systems</h3>
+                    <p>We build the financial backbones for companies. Immutable record keeping, real-time data
+                        visualization, and bank-grade security protocols implemented from the ground up.</p>
+                </div>
+
+                <!-- Tall Card -->
+                <div class="card span-row-2 reveal-up delay-100">
+                    <div class="card-icon"><i class="ri-shopping-cart-2-line"></i></div>
+                    <h3>High-Scale E-commerce</h3>
+                    <p>Forget Shopify themes. We build headless commerce architectures capable of handling 10k+
+                        concurrent users with sub-second load times.</p>
+                </div>
+
+                <!-- Standard Card -->
+                <div class="card reveal-up delay-200">
+                    <div class="card-icon icon-purple"><i class="ri-layout-masonry-line"></i></div>
+                    <h3>Portfolio Sites</h3>
+                    <p>For high-skill individuals. Showcasing work with cinematic interactions.</p>
+                </div>
+
+                <!-- Standard Card -->
+                <div class="card reveal-up delay-200">
+                    <div class="card-icon"><i class="ri-tools-line"></i></div>
+                    <h3>Internal Tools</h3>
+                    <p>Dashboards that actually make sense for your operations team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      FEATURE: The "Code" Look
+    -->
+    <section class="section-py terminal-section">
+        <div class="container"
+            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+            <div style="max-width: 500px;" class="reveal-left">
+                <h2 class="section-title">Clean Code.<br>No Bloat.</h2>
+                <p style="color: var(--text-muted); margin-bottom: 24px;">
+                    We don't use drag-and-drop builders. We write semantic, production-ready code that scales.
+                </p>
+                <ul style="list-style: none; color: #fff;">
+                    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                        <i class="ri-check-line text-purple"></i> 100/100 Lighthouse Performance
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                        <i class="ri-check-line text-purple"></i> Zero-Dependency Architecture
+                    </li>
+                    <li style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                        <i class="ri-check-line text-purple"></i> WCAG 2.1 Accessibility
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Terminal Window -->
+            <div class="code-window reveal-right">
+                <div class="code-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <code>
+                    <span class="line"><span class="keyword">class</span> VendoraSystem <span class="keyword">extends</span> EnterpriseCore {</span>
+                    <span class="line">&nbsp;&nbsp;<span class="keyword">constructor</span>(client) {</span>
+                    <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.security = <span class="string">"AES-256"</span>;</span>
+                    <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.uptime = <span class="string">"99.99%"</span>;</span>
+                    <span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.bloat = <span class="keyword">null</span>;</span>
+                    <span class="line">&nbsp;&nbsp;}</span>
+                    <span class="line">}</span>
+                    <span class="line"><br></span>
+                    <span class="line"><span class="func">deploySystem</span>(<span class="string">"Production"</span>)<span class="cursor"></span></span>
+                </code>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      PROJECTS: Visual Heavy
+    -->
+    <section id="work" class="section-py">
+        <div class="container">
+            <h2 class="section-title reveal-up">Selected Deployments</h2>
+
+            <div class="project-grid" style="margin-top: 40px;">
+                <!-- Project 1 -->
+                <div class="project-card reveal-up">
+                    <div class="project-thumb">
+                        <img src="the-care-bar.jpg"
+                            alt="The Care Bar">
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">
+                            <span class="tech-tag">E-Commerce</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                        <h3>The Care Bar</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Premium beauty retail platform with
+                            inventory syncing.</p>
+                        <a href="https://the-care-bar.com" target="_blank" class="btn btn-glass"
+                            style="width: 100%; justify-content: center;">
+                            Visit Site <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal-up delay-100">
+                    <div class="project-thumb">
+                        <img src="rhias.jpeg"
+                            alt="Real Estate">
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">
+                            <span class="tech-tag">Booking Engine</span>
+                            <span class="tech-tag">Real Estate</span>
+                        </div>
+                        <h3>Eliora Apartments</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Direct booking system bypassing
+                            third-party fees.</p>
+                        <a href="https://elioraapartment.com" target="_blank" class="btn btn-glass"
+                            style="width: 100%; justify-content: center;">
+                            Visit Site <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+      CONTACT: Footer CTA
+    -->
+    <section id="contact" class="section-py">
+        <div class="container">
+            <div class="contact-box reveal-scale">
+                <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to ship?</h2>
+                <p style="color: #cbd5e1; margin-bottom: 40px; font-size: 1.2rem;">
+                    We are currently accepting new enterprise contracts for Q2 2026.
+                </p>
+                <form id="contactForm"
+                    style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px; flex-direction: column;">
+                    <input type="email" placeholder="Enter your work email"
+                        style="padding: 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: rgba(0,0,0,0.3); color: white; outline: none;">
+                    <button type="submit" class="btn btn-primary" style="justify-content: center;">
+                        Get in Touch
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-flex">
+            <div>
+                <span style="font-weight: 800; font-size: 1.2rem;">VENDORA.</span>
+                <span style="color: var(--text-muted); font-size: 0.9rem; margin-left: 10px;">&copy; 2026</span>
+            </div>
+            <div class="socials">
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE SIDEBAR (Put this right after <body>) -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <span style="font-weight: 800; font-size: 1.2rem;">MENU</span>
+            <div class="close-btn" id="closeSidebar"><i class="ri-close-line"></i></div>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+            <li><a href="#expertise" onclick="toggleMenu()">Expertise</a></li>
+            <li><a href="#about" onclick="toggleMenu()">Company</a></li>
+            <li><a href="#contact" onclick="toggleMenu()" style="color: var(--primary-purple);">Start Project</a></li>
+        </ul>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo-area">
+            <img src="logo.png" alt="VENDORA Logo"
+                class="logo-img">
+        </div>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links">
+            <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#expertise" class="nav-link">Expertise</a></li>
+            <li><a href="#about" class="nav-link">Company</a></li>
+        </ul>
+
+        <!-- CTA: Added desktop-only class so it hides on mobile to save space -->
+        <a href="#contact" class="btn btn-primary desktop-only" style="padding: 8px 16px; font-size: 0.9rem;">Start
+            Project</a>
+
+        <!-- Hamburger Trigger -->
+        <div class="hamburger" id="hamburgerBtn"><i class="ri-menu-4-line"></i></div>
+    </nav>
+
+    <script>
+        // Initialize ScrollReveal with "Mad Cool" settings
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 1200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)', // Smooth ease out
+            interval: 100,
+            mobile: true
+        });
+
+        sr.reveal('.reveal-up', { origin: 'bottom' });
+        sr.reveal('.reveal-down', { origin: 'top' });
+        sr.reveal('.reveal-left', { origin: 'left' });
+        sr.reveal('.reveal-right', { origin: 'right' });
+        sr.reveal('.reveal-scale', { scale: 0.9, duration: 1000 });
+
+        // Simple Form Handler (Visual feedback only)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const input = this.querySelector('input');
+
+            btn.innerHTML = '<i class="ri-check-line"></i> Request Sent';
+            btn.style.background = 'var(--accent-cyan)';
+            btn.style.color = '#000';
+            input.value = '';
+        });
+
+        // 3D Tilt Effect logic for Hero Image (Vanilla JS)
+        const heroVisual = document.querySelector('.hero-visual');
+        if (heroVisual) {
+            document.addEventListener('mousemove', (e) => {
+                const x = (window.innerWidth / 2 - e.pageX) / 50;
+                const y = (window.innerHeight / 2 - e.pageY) / 50;
+                heroVisual.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
+            });
+        }
+
+        // --- MOBILE MENU LOGIC ---
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeSidebar = document.getElementById('closeSidebar');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+
+        // Function to toggle menu
+        function toggleMenu() {
+            mobileSidebar.classList.toggle('active');
+        }
+
+        // Open
+        hamburgerBtn.addEventListener('click', toggleMenu);
+
+        // Close
+        closeSidebar.addEventListener('click', toggleMenu);
+
+        // Close when clicking outside (Optional polish)
+        document.addEventListener('click', (e) => {
+            if (!mobileSidebar.contains(e.target) && !hamburgerBtn.contains(e.target) && mobileSidebar.classList.contains('active')) {
+                mobileSidebar.classList.remove('active');
+            }
+        });
     </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
