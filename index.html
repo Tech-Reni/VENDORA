@@ -1007,6 +1007,26 @@
                         </a>
                     </div>
                 </div>
+
+                 <!-- Project 3 -->
+                <div class="project-card reveal-up delay-100">
+                    <div class="project-thumb">
+                        <img src="carrafox.jpeg"
+                            alt="Carrafox Massages">
+                    </div>
+                    <div class="project-content">
+                        <div class="tech-stack">
+                            <span class="tech-tag">ChatBot</span>
+                            <span class="tech-tag">Crypto Integration</span>
+                        </div>
+                        <h3>Carrafox Massages</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">A Premium Massage Service.</p>
+                        <a href="https://carrafoxmassages.com" target="_blank" class="btn btn-glass"
+                            style="width: 100%; justify-content: center;">
+                            Visit Site <i class="ri-external-link-line"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1019,11 +1039,11 @@
             <div class="contact-box reveal-scale">
                 <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to ship?</h2>
                 <p style="color: #cbd5e1; margin-bottom: 40px; font-size: 1.2rem;">
-                    We are currently accepting new enterprise contracts for Q2 2026.
+                    We are currently accepting new enterprise contracts for 2026.
                 </p>
                 <form id="contactForm"
                     style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px; flex-direction: column;">
-                    <input type="email" placeholder="Enter your work email"
+                    <input type="text" placeholder="What would you like to build?" required
                         style="padding: 16px; border-radius: 8px; border: 1px solid var(--border-subtle); background: rgba(0,0,0,0.3); color: white; outline: none;">
                     <button type="submit" class="btn btn-primary" style="justify-content: center;">
                         Get in Touch
@@ -1100,13 +1120,22 @@
         sr.reveal('.reveal-right', { origin: 'right' });
         sr.reveal('.reveal-scale', { scale: 0.9, duration: 1000 });
 
-        // Simple Form Handler (Visual feedback only)
+        // Contact form handler: constructs a WhatsApp message and opens chat
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const btn = this.querySelector('button');
             const input = this.querySelector('input');
 
-            btn.innerHTML = '<i class="ri-check-line"></i> Request Sent';
+            // build a nicely formatted message using emojis and line breaks
+            const msgBody = `👋 *New Inquiry*\n\n💡 *What to build:* ${input.value}\n\nThank you! 🚀`;
+            const encoded = encodeURIComponent(msgBody);
+            const url = `https://wa.me/+2348133033736?text=${encoded}`;
+
+            // open WhatsApp in new tab/window
+            window.open(url, '_blank');
+
+            // visual feedback on the form
+            btn.innerHTML = '<i class="ri-check-line"></i> Sent!';
             btn.style.background = 'var(--accent-cyan)';
             btn.style.color = '#000';
             input.value = '';
